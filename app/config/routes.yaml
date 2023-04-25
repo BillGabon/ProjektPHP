@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+hello_index:
+  path: /hello/{name}
+  controller: App\Controller\HelloController::index
+  requirements:
+    name: '[a-zA-Z]+'
+  methods: GET
+  defaults:
+    name: 'World'
